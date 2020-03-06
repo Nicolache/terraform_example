@@ -1,3 +1,4 @@
+*.save
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup

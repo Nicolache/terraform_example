@@ -12,7 +12,8 @@ resource "google_compute_instance" "db" {
     access_config {}
   }
   metadata = {
-    sshKeys = "appuser:file(var.public_key_path)"
+    # sshKeys = "appuser:file(var.public_key_path)"
+    sshKeys = "appuser:${file("${var.public_key_path}")}"
   }
 }
 
