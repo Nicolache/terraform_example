@@ -15,3 +15,10 @@ module "db" {
   public_key_path = var.public_key_path
   db_disk_image = var.db_disk_image
 }
+
+module "vpc" {
+  source = "./modules/vpc"
+  public_key_path = var.public_key_path
+  source_ranges = ["94.241.0.0/16"]
+  vpc_disk_image = var.vpc_disk_image
+}
