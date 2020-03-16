@@ -33,7 +33,7 @@ resource "google_compute_firewall" "firewall_ssh" {
   }
   source_ranges = var.source_ranges
   # правило применимо к инстансам с тегом ...
-  target_tags = ["reddit-vpc"]
+  # target_tags = ["reddit-vpc"]
   # порт будет доступен только для инстансов с тегом ...
   source_tags = ["reddit-app"]
 }
